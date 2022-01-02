@@ -1,0 +1,22 @@
+// Now we define the theorem into codes
+function primetest(n) {
+  let i = 2; // we start from 2 because 1 can divide every integer.
+  let check = false;
+  while (i <= Math.sqrt(n) && !check ) { // We will use two conditions: when the number fulfills theorem and when the number is divisible by whole number
+    if ( n % i == 0 ) {
+      check = true;
+    }
+    i++; // We use primality test by checking divisibility from 2 until SQRT(n).
+  }
+  return check;
+}
+
+// Change the inputs below to test
+let n = 199
+if (primetest(n)) {
+    console.log("Bilangan bukan prima");
+}
+else
+{
+    console.log("Bilangan prima");
+}
